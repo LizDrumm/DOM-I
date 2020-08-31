@@ -58,20 +58,20 @@ nav6.textContent= 'Contact'
 
 
 // add new nav links
-/*prepend
-const navBeg = document.querySelector('nav');
+//prepend
+/*const navBeg = document.querySelector('nav');
 const addElement1 =document.createElement('a')
-navBeg.href= '#';
 add.Element1.textContent= 'Welcome'
-navBeg.prepend(addElement1)
-;*/
+addElement1.setAttribute('href', '#')
+navBeg.prepend(addElement1)*/
+
 
 //append 
 const navEnd = document.querySelector('nav');
 const addElement = document.createElement('a')
 addElement.textContent = 'Info'
 navEnd.appendChild(addElement)
-navEnd.href= '#';
+addElement.setAttribute('href', '#')
 
 
 /* change color of nav links */
