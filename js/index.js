@@ -51,8 +51,11 @@ nav[3].textContent = siteContent ["nav"]["nav-item-4"]
 nav[4].textContent = siteContent ["nav"]["nav-item-5"]
 nav[5].textContent = siteContent ["nav"]["nav-item-6"]
 
-//const nav2 = nav.nextElementSibling
-/*nav2.textContent = 'Product'
+
+
+//How I did it wrong the first time
+/*const nav2 = nav.nextElementSibling
+nav2.textContent = 'Product'
 const nav3= nav2.nextElementSibling
 nav3.textContent = 'Vision'
 const nav4= nav3.nextElementSibling
@@ -90,20 +93,19 @@ nav6.textContent= 'Contact'*/
 
 /* h1, button and header image*/
 const header = document.querySelector('h1')
-header.innerHTML = "Dom  <br>  is <br> Awesome"
-//header.innerHTML = siteContent["cta"]["h1"].split('1').join('<br/>')
+//header.innerHTML = "Dom  <br>  is <br> Awesome"
+header.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>')
 
 
 const button = document.querySelector ('button')
 button.textContent = siteContent[ "cta"]["button"]
 //button.textContent = 'Get Started'
 
-//const headerImg= document.querySelector ('.cta #cta-img')
-//headerImg.src = 'img/header-img.png'
+/*const headerImg= document.querySelector ('.cta #cta-img')
+headerImg.src = 'img/header-img.png'*/
 
 const headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"])
-
 
 
 //Middle section h4, paragraphs and picture
@@ -135,9 +137,12 @@ const h4Contact= document.querySelector('.contact h4')
 h4Contact.textContent = siteContent ["contact"]["contact-h4"]
 
 const contactInfo = document.querySelectorAll('.contact p')
-contactInfo[0].textContent = siteContent ["contact"]["address"]
+//contactInfo[0].textContent = siteContent ["contact"]["address"]
+contactInfo[0].innerHTML = siteContent["contact"]["address"].split('Street').join('<br>') 
 contactInfo[1].textContent = siteContent ["contact"]["phone"]
 contactInfo[2].textContent = siteContent ["contact"]["email"]
+
+//did it wrong
 // add1.innerHTML =  "123 Way 456 Street<br> Somewhere, USA "
 // const add2= add1.nextElementSibling
 // add2.textContent= "1 (888) 888-8888"
