@@ -59,19 +59,20 @@ nav6.textContent= 'Contact'
 
 // add new nav links
 //prepend
-/*const navBeg = document.querySelector('nav');
+const navBeg = document.querySelector('nav');
 const addElement1 =document.createElement('a')
-add.Element1.textContent= 'Welcome'
+addElement1.textContent= 'Welcome'
 addElement1.setAttribute('href', '#')
-navBeg.prepend(addElement1)*/
+navBeg.prepend(addElement1)
 
 
 //append 
 const navEnd = document.querySelector('nav');
 const addElement = document.createElement('a')
 addElement.textContent = 'Info'
-navEnd.appendChild(addElement)
 addElement.setAttribute('href', '#')
+navEnd.appendChild(addElement)
+
 
 
 /* change color of nav links */
@@ -90,6 +91,8 @@ button.textContent = 'Get Started'
 const headerImg= document.querySelector ('.cta #cta-img')
 headerImg.src = 'img/header-img.png'
 
+
+
 //Middle section h4, paragraphs and picture
 
 const h4Middle= document.querySelectorAll('.text-content h4')
@@ -100,7 +103,7 @@ h4Middle[3].textContent ='Product'
 h4Middle[4].textContent = 'Vision'
 
 
-const paragraph= document.querySelectorAll (' .text-content p')
+const paragraph= document.querySelectorAll ('.text-content p')
 paragraph[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 paragraph[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
@@ -119,7 +122,7 @@ paragraph[4].textContent = 'Vision content elementum magna eros, ac posuere elvi
 const h4Contact= document.querySelector('.contact h4')
 h4Contact.textContent = 'Contact'
 
-const add1 = document.querySelector('.contact p:nth-of-type(1)')
+const add1 = document.querySelector('.contact p')
 add1.innerHTML =  "123 Way 456 Street<br> Somewhere, USA "
 const add2= add1.nextElementSibling
 add2.textContent= "1 (888) 888-8888"
