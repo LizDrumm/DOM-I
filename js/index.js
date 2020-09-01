@@ -43,10 +43,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //navigation links//
-const nav = document.querySelector('a') 
-nav.textContent = 'Services'
-const nav2 = nav.nextElementSibling
-nav2.textContent = 'Product'
+let nav = document.querySelectorAll('a') 
+nav[0].textContent = siteContent ["nav"]["nav-item-1"]
+nav[1].textContent = siteContent ["nav"]["nav-item-2"]
+nav[2].textContent = siteContent ["nav"]["nav-item-3"]
+nav[3].textContent = siteContent ["nav"]["nav-item-4"]
+nav[4].textContent = siteContent ["nav"]["nav-item-5"]
+nav[5].textContent = siteContent ["nav"]["nav-item-6"]
+
+//const nav2 = nav.nextElementSibling
+/*nav2.textContent = 'Product'
 const nav3= nav2.nextElementSibling
 nav3.textContent = 'Vision'
 const nav4= nav3.nextElementSibling
@@ -54,81 +60,92 @@ nav4.textContent = 'Features'
 const nav5 = nav4.nextElementSibling
 nav5.textContent = 'About'
 const nav6 = nav5.nextElementSibling
-nav6.textContent= 'Contact'
+nav6.textContent= 'Contact'*/
 
 
 // add new nav links
 //prepend
-const navBeg = document.querySelector('nav');
-const addElement1 =document.createElement('a')
-addElement1.textContent= 'Welcome'
-addElement1.setAttribute('href', '#')
-navBeg.prepend(addElement1)
+ const navBeg = document.querySelector('nav');
+ const addElement1 =document.createElement('a')
+ addElement1.textContent= 'Welcome'
+ addElement1.setAttribute('href', '#')
+ navBeg.prepend(addElement1)
 
 
 //append 
-const navEnd = document.querySelector('nav');
-const addElement = document.createElement('a')
-addElement.textContent = 'Info'
-addElement.setAttribute('href', '#')
-navEnd.appendChild(addElement)
+ const navEnd = document.querySelector('nav');
+ const addElement = document.createElement('a')
+ addElement.textContent = 'Info'
+ addElement.setAttribute('href', '#')
+ navEnd.appendChild(addElement)
 
 
 
-/* change color of nav links */
-const allLinks = document.querySelectorAll('a')
-for (let i = 0; i < allLinks.length; i++) {
-  allLinks[i].style.color = 'green'
-}
+//  change color of nav links 
+ let allLinks = document.querySelectorAll('a')
+ for (let i = 0; i < allLinks.length; i++) {
+   allLinks[i].style.color = 'green'
+ }
 
 
 /* h1, button and header image*/
 const header = document.querySelector('h1')
 header.innerHTML = "Dom  <br>  is <br> Awesome"
-const button = document.querySelector ('button')
-button.textContent = 'Get Started'
+//header.innerHTML = siteContent["cta"]["h1"].split('1').join('<br/>')
 
-const headerImg= document.querySelector ('.cta #cta-img')
-headerImg.src = 'img/header-img.png'
+
+const button = document.querySelector ('button')
+button.textContent = siteContent[ "cta"]["button"]
+//button.textContent = 'Get Started'
+
+//const headerImg= document.querySelector ('.cta #cta-img')
+//headerImg.src = 'img/header-img.png'
+
+const headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 
 
 //Middle section h4, paragraphs and picture
-
 const h4Middle= document.querySelectorAll('.text-content h4')
-h4Middle[0].textContent = 'Features'
-h4Middle[1].textContent = 'About'
-h4Middle[2].textContent= 'Services'
-h4Middle[3].textContent ='Product'
-h4Middle[4].textContent = 'Vision'
+h4Middle[0].textContent = siteContent ["main-content"]["features-h4"]
+h4Middle[1].textContent = siteContent ["main-content"]["about-h4"]
+h4Middle[2].textContent= siteContent ["main-content"]["services-h4"]
+h4Middle[3].textContent =siteContent ["main-content"]["product-h4"]
+h4Middle[4].textContent = siteContent ["main-content"]["vision-h4"]
 
 
 const paragraph= document.querySelectorAll ('.text-content p')
-paragraph[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+paragraph[0].textContent = siteContent ["main-content"]["features-content"]
+paragraph[1].textContent = siteContent ["main-content"]["about-content"]
+paragraph[2].textContent = siteContent ["main-content"]["features-content"]
+paragraph[3].textContent = siteContent ["main-content"]["product-content"]
+paragraph[4].textContent = siteContent ["main-content"]["vision-content"]
 
-paragraph[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
-const middleImg= document.querySelector ('.middle-img')
-middleImg.src = 'img/mid-page-accent.jpg'
+//const middleImg= document.querySelector ('.middle-img')
+//middleImg.src = 'img/mid-page-accent.jpg'
 
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-paragraph[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-
-paragraph[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-
-paragraph[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 //contact section
 const h4Contact= document.querySelector('.contact h4')
-h4Contact.textContent = 'Contact'
+h4Contact.textContent = siteContent ["contact"]["contact-h4"]
 
-const add1 = document.querySelector('.contact p')
-add1.innerHTML =  "123 Way 456 Street<br> Somewhere, USA "
-const add2= add1.nextElementSibling
-add2.textContent= "1 (888) 888-8888"
-const add3= add2.nextElementSibling
-add3.textContent="sales@greatidea.io"
+const contactInfo = document.querySelectorAll('.contact p')
+contactInfo[0].textContent = siteContent ["contact"]["address"]
+contactInfo[1].textContent = siteContent ["contact"]["phone"]
+contactInfo[2].textContent = siteContent ["contact"]["email"]
+// add1.innerHTML =  "123 Way 456 Street<br> Somewhere, USA "
+// const add2= add1.nextElementSibling
+// add2.textContent= "1 (888) 888-8888"
+// const add3= add2.nextElementSibling
+// add3.textContent="sales@greatidea.io"
+
+
 
 //footer
 const footer = document.querySelector('footer')
-footer.textContent= 'Copyright Great Idea! 2018'
+footer.textContent= siteContent ["footer"]["copyright"]
